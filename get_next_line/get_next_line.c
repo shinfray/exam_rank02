@@ -6,7 +6,7 @@
 /*   By: shinfray <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 16:21:58 by shinfray          #+#    #+#             */
-/*   Updated: 2023/01/19 21:25:01 by shinfray         ###   ########.fr       */
+/*   Updated: 2023/01/19 22:54:48 by shinfray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ static char	*ft_parse(int fd, char *stash)
 	char	*line;
 	char	*newline_address;
 	
+	line = NULL;
 	bytes_read = read(fd, stash, BUFFER_SIZE);
 	while (bytes_read > 0)
 	{
@@ -84,7 +85,7 @@ char	*get_next_line(int fd)
 	string_from_file = ft_parse(fd, stash);
 	if (string_from_file != NULL)
 	{
-		line = ft_gnl_strnjoin(line, string_from_file, );
+		line = ft_gnl_strnjoin(line, string_from_file, 0);
 		free(string_from_file);
 		return (line);
 	}

@@ -6,7 +6,7 @@
 /*   By: shinfray <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 16:27:04 by shinfray          #+#    #+#             */
-/*   Updated: 2023/01/19 21:24:45 by shinfray         ###   ########.fr       */
+/*   Updated: 2023/01/19 22:54:26 by shinfray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ char	*ft_gnl_strnjoin(char *src1, char *src2, size_t n_of_src2_to_copy)
 
 	src1_len = ft_gnl_strlen(src1);
 	src2_len = ft_gnl_strlen(src2);
-	if (src2_len > n_of_src2_to_copy)
+	if (src2_len > n_of_src2_to_copy && n_of_src2_to_copy != 0)
 		src2_len = n_of_src2_to_copy;
 	dest_str = ft_calloc(src1_len + src2_len + 1, sizeof(*dest_str));
 	if (dest_str != NULL)
