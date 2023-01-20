@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_utils.c                              :+:      :+:    :+:   */
+/*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: shinfray <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: shinfray <shinfray@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/19 16:27:04 by shinfray          #+#    #+#             */
-/*   Updated: 2023/01/20 11:28:01 by shinfray         ###   ########.fr       */
+/*   Created: 2023/01/20 12:44:35 by shinfray          #+#    #+#             */
+/*   Updated: 2023/01/20 12:45:48 by shinfray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 void	*ft_calloc(size_t count, size_t size)
 {

@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: shinfray <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: shinfray <shinfray@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/19 16:21:58 by shinfray          #+#    #+#             */
-/*   Updated: 2023/01/20 12:37:57 by shinfray         ###   ########.fr       */
+/*   Created: 2023/01/20 12:44:05 by shinfray          #+#    #+#             */
+/*   Updated: 2023/01/20 12:56:28 by shinfray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 #include <stdio.h>
 
 static void	ft_update_stash(char *stash, char *newline_address)
