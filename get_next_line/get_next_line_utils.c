@@ -6,13 +6,13 @@
 /*   By: shinfray <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 16:27:04 by shinfray          #+#    #+#             */
-/*   Updated: 2023/01/19 22:54:26 by shinfray         ###   ########.fr       */
+/*   Updated: 2023/01/20 01:01:51 by shinfray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-static void	*ft_calloc(size_t count, size_t size)
+void	*ft_calloc(size_t count, size_t size)
 {
 	const size_t	full_size = size * count;
 	size_t			i;
@@ -38,7 +38,7 @@ static size_t	ft_gnl_strlen(const char *str)
 	return (i);
 }
 
-static void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	char		*cast_dst;
 	const char	*cast_src;
@@ -48,7 +48,7 @@ static void	*ft_memcpy(void *dst, const void *src, size_t n)
 	if (cast_src == cast_dst)
 		return (dst);
 	while (n-- > 0)
-		*cast_dst = *cast_src;
+		*cast_dst++ = *cast_src++;
 	return (dst);
 }
 
@@ -60,7 +60,7 @@ char	*ft_gnl_strnjoin(char *src1, char *src2, size_t n_of_src2_to_copy)
 
 	src1_len = ft_gnl_strlen(src1);
 	src2_len = ft_gnl_strlen(src2);
-	if (src2_len > n_of_src2_to_copy && n_of_src2_to_copy != 0)
+	if (n_of_src2_to_copy != 0 && src2_len > n_of_src2_to_copy)
 		src2_len = n_of_src2_to_copy;
 	dest_str = ft_calloc(src1_len + src2_len + 1, sizeof(*dest_str));
 	if (dest_str != NULL)

@@ -6,11 +6,12 @@
 /*   By: shinfray <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 16:21:58 by shinfray          #+#    #+#             */
-/*   Updated: 2023/01/19 22:54:48 by shinfray         ###   ########.fr       */
+/*   Updated: 2023/01/20 01:03:56 by shinfray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
+#include <stdio.h>
 
 static void	ft_update_stash(char *stash, char *newline_address)
 {
