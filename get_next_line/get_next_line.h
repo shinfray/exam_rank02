@@ -6,7 +6,7 @@
 /*   By: shinfray <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 16:22:11 by shinfray          #+#    #+#             */
-/*   Updated: 2023/01/20 01:31:07 by shinfray         ###   ########.fr       */
+/*   Updated: 2023/01/20 01:45:36 by shinfray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@
 #  define BUFFER_SIZE 0
 # endif
 
-#include <unistd.h>
-#include <stdlib.h>
-#include <limits.h>
+# include <unistd.h>
+# include <stdlib.h>
+# include <limits.h>
 
 char	*get_next_line(int fd);
 char	*ft_gnl_strnjoin(char *src1, char *src2, size_t n_of_src2_to_copy);

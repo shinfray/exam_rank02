@@ -6,7 +6,7 @@
 /*   By: shinfray <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 16:27:04 by shinfray          #+#    #+#             */
-/*   Updated: 2023/01/20 01:01:51 by shinfray         ###   ########.fr       */
+/*   Updated: 2023/01/20 01:41:16 by shinfray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static size_t	ft_gnl_strlen(const char *str)
 	i = 0;
 	if (str == NULL)
 		return (0);
-	while  (str[i] != '\0')
+	while (str[i] != '\0')
 		++i;
 	return (i);
 }
