@@ -6,7 +6,7 @@
 /*   By: shinfray <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 16:21:58 by shinfray          #+#    #+#             */
-/*   Updated: 2023/01/20 19:46:13 by shinfray         ###   ########.fr       */
+/*   Updated: 2023/01/21 12:01:53 by shinfray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,11 +78,7 @@ char	*get_next_line(int fd)
 		return (NULL);
 	line = NULL;
 	if (stash[0] != '\0')
-	{
 		if (ft_retrieve_from_stash(&line, stash) != NULL || line == NULL)
-		{
 			return (line);
-		}
-	}
 	return (ft_parse(fd, line, stash));
 }
