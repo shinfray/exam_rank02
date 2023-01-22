@@ -3,28 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: shinfray <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: shinfray <shinfray@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/19 16:27:04 by shinfray          #+#    #+#             */
-/*   Updated: 2023/01/20 11:28:01 by shinfray         ###   ########.fr       */
+/*   Created: 2023/01/22 19:08:25 by shinfray          #+#    #+#             */
+/*   Updated: 2023/01/22 20:13:28 by shinfray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
-
-void	*ft_calloc(size_t count, size_t size)
-{
-	const size_t	full_size = size * count;
-	size_t			i;
-	char			*ptr;
-
-	i = 0;
-	ptr = malloc(full_size);
-	if (ptr != NULL)
-		while (i < full_size)
-			ptr[i++] = '\0';
-	return (ptr);
-}
 
 static size_t	ft_gnl_strlen(const char *str)
 {
@@ -38,7 +24,7 @@ static size_t	ft_gnl_strlen(const char *str)
 	return (i);
 }
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+static void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	char		*cast_dst;
 	const char	*cast_src;
@@ -52,6 +38,20 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	return (dst);
 }
 
+static void	*ft_calloc(size_t count, size_t size)
+{
+	const size_t	full_size = size * count;
+	size_t			i;
+	char			*ptr;
+
+	i = 0;
+	ptr = malloc(full_size);
+	if (ptr != NULL)
+		while (i < full_size)
+			ptr[i++] = '\0';
+	return (ptr);
+}
+
 char	*ft_gnl_strnjoin(char *src1, char *src2, size_t n_of_src2_to_copy)
 {
 	size_t	src1_len;
@@ -62,7 +62,7 @@ char	*ft_gnl_strnjoin(char *src1, char *src2, size_t n_of_src2_to_copy)
 		return (NULL);
 	src1_len = ft_gnl_strlen(src1);
 	src2_len = ft_gnl_strlen(src2);
-	if (n_of_src2_to_copy != 0 && src2_len > n_of_src2_to_copy)
+	if (src2_len > n_of_src2_to_copy)
 		src2_len = n_of_src2_to_copy;
 	dest_str = ft_calloc(src1_len + src2_len + 1, sizeof(*dest_str));
 	if (dest_str != NULL)

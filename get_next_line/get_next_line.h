@@ -6,7 +6,7 @@
 /*   By: shinfray <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 16:22:11 by shinfray          #+#    #+#             */
-/*   Updated: 2023/01/20 12:31:12 by shinfray         ###   ########.fr       */
+/*   Updated: 2023/01/22 20:13:51 by shinfray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,5 @@
 char	*get_next_line(int fd);
 char	*ft_gnl_strnjoin(char *src1, char *src2, size_t n_of_src2_to_copy);
 char	*ft_strchr(const char *s, int c);
-void	*ft_calloc(size_t count, size_t size);
-void	*ft_memcpy(void *dst, const void *src, size_t n);
 
 #endif
