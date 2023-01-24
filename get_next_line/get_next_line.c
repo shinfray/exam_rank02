@@ -6,7 +6,7 @@
 /*   By: shinfray <shinfray@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 14:50:45 by shinfray          #+#    #+#             */
-/*   Updated: 2023/01/24 13:55:17 by shinfray         ###   ########.fr       */
+/*   Updated: 2023/01/24 16:05:52 by shinfray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,8 +59,7 @@ static char	*ft_retrieve_from_stash(char *line, char *stash, char **newline)
 			ft_update_stash(stash, *newline);
 		return (line);
 	}
-	line = ft_gnl_strnjoin(NULL, stash, BUFFER_SIZE);
-	return (line);
+	return (ft_gnl_strnjoin(NULL, stash, BUFFER_SIZE));
 }
 
 char	*get_next_line(int fd)
