@@ -6,7 +6,7 @@
 /*   By: shinfray <shinfray@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 14:50:45 by shinfray          #+#    #+#             */
-/*   Updated: 2023/01/22 20:00:22 by shinfray         ###   ########.fr       */
+/*   Updated: 2023/01/24 13:55:17 by shinfray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static void	ft_update_stash(char *stash, char *newline)
 	*stash = '\0';
 }
 
-static char	*ft_parse(int fd, char *line, char *stash, char **newline)
+static char	*ft_parse(int fd, char *line, char *stash, char *newline)
 {
 	ssize_t	bytes_read;
 
@@ -28,12 +28,12 @@ static char	*ft_parse(int fd, char *line, char *stash, char **newline)
 	while (bytes_read > 0)
 	{
 		stash[bytes_read] = '\0';
-		*newline = ft_strchr(stash, '\n');
-		if (*newline != NULL)
+		newline = ft_strchr(stash, '\n');
+		if (newline != NULL)
 		{
-			line = ft_gnl_strnjoin(line, stash, *newline - stash + 1);
+			line = ft_gnl_strnjoin(line, stash, newline - stash + 1);
 			if (line != NULL)
-				ft_update_stash(stash, *newline);
+				ft_update_stash(stash, newline);
 			return (line);
 		}
 		line = ft_gnl_strnjoin(line, stash, BUFFER_SIZE);
@@ -79,5 +79,5 @@ char	*get_next_line(int fd)
 		if (line == NULL || newline != NULL)
 			return (line);
 	}
-	return (ft_parse(fd, line, stash, &newline));
+	return (ft_parse(fd, line, stash, newline));
 }
