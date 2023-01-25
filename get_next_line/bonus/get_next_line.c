@@ -6,7 +6,7 @@
 /*   By: shinfray <shinfray@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 14:50:45 by shinfray          #+#    #+#             */
-/*   Updated: 2023/01/25 12:25:15 by shinfray         ###   ########.fr       */
+/*   Updated: 2023/01/25 12:21:11 by shinfray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ static char	*ft_retrieve_from_stash(char *line, char *stash, char **newline)
 
 char	*get_next_line(int fd)
 {
-	static char	stash[OPEN_MAX][BUFFER_SIZE + 1];
+	static char	stash[BUFFER_SIZE + 1];
 	char		*line;
 	char		*newline;
 
@@ -72,11 +72,11 @@ char	*get_next_line(int fd)
 		return (NULL);
 	line = NULL;
 	newline = NULL;
-	if (*stash[fd] != '\0')
+	if (*stash != '\0')
 	{
-		line = ft_retrieve_from_stash(line, stash[fd], &newline);
+		line = ft_retrieve_from_stash(line, stash, &newline);
 		if (line == NULL || newline != NULL)
 			return (line);
 	}
-	return (ft_parse(fd, line, stash[fd], newline));
+	return (ft_parse(fd, line, stash, newline));
 }
