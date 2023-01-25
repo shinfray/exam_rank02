@@ -6,7 +6,7 @@
 /*   By: shinfray <shinfray@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 14:50:45 by shinfray          #+#    #+#             */
-/*   Updated: 2023/01/24 16:05:52 by shinfray         ###   ########.fr       */
+/*   Updated: 2023/01/25 12:21:11 by shinfray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ char	*get_next_line(int fd)
 	char		*line;
 	char		*newline;
 
-	if (fd < 0 || fd > OPEN_MAX)
+	if (fd < 0)
 		return (NULL);
 	line = NULL;
 	newline = NULL;
