@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_utils.c                              :+:      :+:    :+:   */
+/*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: shinfray <shinfray@student.s19.be>         +#+  +:+       +#+        */
+/*   By: shinfray <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/22 19:08:25 by shinfray          #+#    #+#             */
-/*   Updated: 2023/01/22 20:13:28 by shinfray         ###   ########.fr       */
+/*   Created: 2023/01/25 12:35:43 by shinfray          #+#    #+#             */
+/*   Updated: 2023/01/25 12:35:45 by shinfray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 static size_t	ft_gnl_strlen(const char *str)
 {
